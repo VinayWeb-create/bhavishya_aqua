@@ -1,7 +1,11 @@
 import axios from 'axios';
 
+let base = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+if (base.endsWith('/')) base = base.slice(0, -1);
+if (!base.endsWith('/api')) base += '/api';
+
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || '/api',
+  baseURL: base,
   headers: { 'Content-Type': 'application/json' },
 });
 
