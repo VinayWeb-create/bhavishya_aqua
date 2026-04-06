@@ -1,0 +1,15 @@
+{
+  "name": "bhavishya-aqua-feeds-and-needs",
+  "version": "1.0.0",
+  "description": "Full-stack MERN business management system for Bhavishya Aqua Feeds & Needs",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "seed": "cd backend && node seed.js",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "keywords": ["mern", "aqua", "business-management"],
+  "author": "Bhavishya Aqua Feeds & Needs"
+}
