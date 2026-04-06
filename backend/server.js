@@ -24,7 +24,12 @@ app.use('/api/sales', saleRoutes);
 app.use('/api/returns', returnRoutes);
 app.use('/api/reports', reportRoutes);
 
-// Health check
+// API Health & Root
+app.get('/', (req, res) => res.json({ 
+  status: 'online', 
+  message: 'Bhavishya Aqua API is running successfully',
+  version: '1.0.0-modern'
+}));
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
 // Global error handler
